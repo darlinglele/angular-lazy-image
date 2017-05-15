@@ -3,6 +3,7 @@
   "authors": [
     "lessisawesome@gmail.com"
   ],
+  "version": "0.0.1",
   "description": "lazy image loading",
   "main": "angular-lazy-image.js",
   "dependencies": {

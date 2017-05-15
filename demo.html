@@ -9,8 +9,9 @@
 <body ng-app="demoApp">
 
 
-<div id="images" style="height: 600px; overflow: scroll" >
-
+<div ng-controller="demoController as vm" id="images" style="height: 600px; overflow: scroll">
+    <lazy-image class="lazy-image" width="500px" height="200px" thumbnail="{{vm.thumbnail}}"
+                original="{{vm.original}}"></lazy-image>
 
 </div>
 <script type="text/javascript" src='bower_components/angular/angular.min.js'></script>
@@ -18,12 +19,19 @@
 <script type="text/javascript" src='angular-lazy-image.js'></script>
 
 <script>
-    for (var i = 0; i < 20; i++) {
+    for (var i = 1; i < 20; i++) {
         var lazyImage = $('<lazy-image class="lazy-image" width="500px" height="200px" ></lazy-image>');
         lazyImage.attr({thumbnail: "images/" + i + ".png", original: "images/" + i + "x.png"});
         $('#images').append(lazyImage);
     }
-    angular.module('demoApp', ['ngLazyImage']);
+
+
+    angular.module('demoApp', ['ngLazyImage']).controller('demoController', function () {
+        var vm = this;
+        vm.thumbnail = "images/0.png";
+        vm.original = "images/0x.png";
+    });
+
 </script>
 </body>
 </html>

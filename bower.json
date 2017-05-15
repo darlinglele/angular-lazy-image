@@ -1,0 +1,25 @@
+{
+  "name": "angular-lazy-image",
+  "authors": [
+    "lessisawesome@gmail.com"
+  ],
+  "description": "lazy image loading",
+  "main": "angular-lazy-image.js",
+  "dependencies": {
+    "angular": "^1.4.8"
+  },
+  "keywords": [
+    "lazy",
+    "angular",
+    "image"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

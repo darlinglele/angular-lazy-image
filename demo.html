@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Demo of Angular Local Storage Module</title>
+    <link href='angular-lazy-image.css' rel="stylesheet">
+</head>
+<body ng-app="demoApp">
+
+
+<div id="images" style="height: 600px; overflow: scroll" >
+
+
+</div>
+<script type="text/javascript" src='bower_components/angular/angular.min.js'></script>
+<script type="text/javascript" src='bower_components/jquery/dist/jquery.min.js'></script>
+<script type="text/javascript" src='angular-lazy-image.js'></script>
+
+<script>
+    for (var i = 0; i < 20; i++) {
+        var lazyImage = $('<lazy-image class="lazy-image" width="500px" height="200px" ></lazy-image>');
+        lazyImage.attr({thumbnail: "images/" + i + ".png", original: "images/" + i + "x.png"});
+        $('#images').append(lazyImage);
+    }
+    angular.module('demoApp', ['ngLazyImage']);
+</script>
+</body>
+</html>

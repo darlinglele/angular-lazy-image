@@ -3,12 +3,11 @@
   "authors": [
     "lessisawesome@gmail.com"
   ],
-  "version": "0.0.1",
   "description": "lazy image loading",
   "main": "angular-lazy-image.js",
   "dependencies": {
     "angular": "^1.4.8",
-    "jquery": "^3.2.1"
+    "jquery": "^1.2.1"
   },
   "keywords": [
     "lazy",
